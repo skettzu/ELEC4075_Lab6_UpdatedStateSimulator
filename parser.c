@@ -28,6 +28,10 @@ Simulation should choose the most optimal combination (80%, 90%, 100%) and (1 or
 
 Design an input file that swaps in/out processes multiple times [DONE]
 
+Check if last operation, then display the after state.
+
+Reset blocked q ind after 20 reads
+
 Results:
 Swap out/in is working
 Overall latency is working
@@ -299,6 +303,9 @@ int main()
 						// Store in process id in circular q and keep track of next index
 						blocked_circular_queue[blocked_q_rear] = temp_id - 1;
 						blocked_q_rear = blocked_q_rear + 1;
+						if (blocked_q_rear == 20) {
+							blocked_q_rear = 0;
+						}
 						// Update overall latency
 						overall_latency = overall_latency + 1;
 						if (swap_cap == 2) {
@@ -311,6 +318,9 @@ int main()
 							// Store in process id in circular q and keep track of next index
 							blocked_circular_queue[blocked_q_rear] = rand_process_swap_ind;
 							blocked_q_rear = blocked_q_rear + 1;
+							if (blocked_q_rear == 20) {
+								blocked_q_rear = 0;
+							}
 							// Update overall latency
 							overall_latency = overall_latency + 1;
 						}
@@ -325,6 +335,9 @@ int main()
 						// Store in process id in circular q and keep track of next index
 						blocked_circular_queue[blocked_q_rear] = temp_id - 1;
 						blocked_q_rear = blocked_q_rear + 1;
+						if (blocked_q_rear == 20) {	// reset ind to zero once 20 hit
+							blocked_q_rear = 0;
+						}
 						// Update overall latency
 						overall_latency = overall_latency + 1;
 						if (swap_cap == 2) {
@@ -337,6 +350,9 @@ int main()
 							// Store in process id in circular q and keep track of next index
 							blocked_circular_queue[blocked_q_rear] = rand_process_swap_ind;
 							blocked_q_rear = blocked_q_rear + 1;
+							if (blocked_q_rear == 20) {
+								blocked_q_rear = 0;
+							}
 							// Update overall latency
 							overall_latency = overall_latency + 1;
 						}
@@ -382,8 +398,11 @@ int main()
 							strcat(processes[blocked_circular_queue[blocked_q_front]].state, "*");
 							prev_id[prev_track] = blocked_circular_queue[blocked_q_front];
 							prev_track++;
-							blocked_circular_queue[blocked_q_front] = -1;			// update index to be read already
+							blocked_circular_queue[blocked_q_front] = -2;			// update index to be read already
 							blocked_q_front = blocked_q_front + 1;					// update front index
+							if (blocked_q_front == 20) {
+								blocked_q_front = 0;
+							}
 							// Update overall latency
 							overall_latency = overall_latency + 1;
 						}

@@ -25,4 +25,4 @@ P4 interrupt
 P7 terminated 
 P1 terminated P4 dispatched 
 P4 terminated P8 dispatched 
-P8 requests keyboard 
+P8 requests keyboard P12 interrupt 
