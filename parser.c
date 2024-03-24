@@ -11,31 +11,6 @@
 CHANGE fp1 AND fp2 IN BOTH PARSER() AND MAIN() ACCORDING TO
 THE INPUT FILE THAT YOU WANT TO USE
 
-To Do:
-Once a process goes into blocked state and it meets the threshold, swap out that
-same process [DONE]
-
-When a process exits/terminates, swap back in the latest process
-Use a circular queue (FIFO) to determine which process is swapped back in [DONE]
-
-Will need a blocked tracker, keeping track of the number of blocked processes
-in relation to the total processes to check if it hit the threshold [DONE]
-
-Keep track of overhead latency, every time a process is swapped in/out it adds a fixed latency
-Bus is only wide enough to swap in/out one process, every time two processes is swapped it doubles the fixed latency [DONE]
-
-Simulation should choose the most optimal combination (80%, 90%, 100%) and (1 or 2 swapped processes) based on the least latency. [DONE]
-
-Design an input file that swaps in/out processes multiple times [DONE]
-
-Check if last operation, then display the after state.
-
-Reset blocked q ind after 20 reads
-
-Results:
-Swap out/in is working
-Overall latency is working
-
 */
 
 struct Process {

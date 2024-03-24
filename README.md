@@ -44,3 +44,26 @@ overall overhead latency. Therefore, the frequency of swapping affects the overa
 • The bus is wide enough to transfer one process at a time between main memory and the disk. Therefore,
 swapping in or out two Processes increases the overall overhead latency more than swapping in or out a single
 process
+
+Features:
+Once a process goes into blocked state and it meets the threshold, swap out that
+same process [DONE]
+
+When a process exits/terminates, swap back in the latest process
+Use a circular queue (FIFO) to determine which process is swapped back in [DONE]
+
+Will need a blocked tracker, keeping track of the number of blocked processes
+in relation to the total processes to check if it hit the threshold [DONE]
+
+Keep track of overhead latency, every time a process is swapped in/out it adds a fixed latency
+Bus is only wide enough to swap in/out one process, every time two processes is swapped it doubles the fixed latency [DONE]
+
+User can choose process capacity (1 or 2) and threshold (80%, 90%, 100%) [DONE]
+
+Design an input file that swaps in/out processes multiple times [DONE]
+
+
+Results:
+Swap out/in is working
+Overall latency is working
+
