@@ -54,8 +54,8 @@ void parser() {
 
 	FILE* fp1;
 	FILE* fp2;
-	fp1 = fopen("inp2.txt", "r");			//open the original input file
-	fp2 = fopen("inp2_parsed.txt", "w");	//output the Process ID and event to another file. 
+	fp1 = fopen("inp3.txt", "r");			//open the original input file
+	fp2 = fopen("inp3_parsed.txt", "w");	//output the Process ID and event to another file. 
 	//You can store in variables instead of printing to file
 
 	lineP = 0;
@@ -157,7 +157,7 @@ void queue_parser(char* queue) {
 int main()
 {
 
-	parser(); // run parser and stored parsed information in inp2_parsed.txt
+	parser(); // run parser and stored parsed information in inp3_parsed.txt
 	int swap_cap = 0;
 	float usr_threshold = 0.0;
 	
@@ -174,8 +174,8 @@ int main()
 	srand(time(NULL));  // Random num seed
 	FILE* fp1;
 	FILE* fp2;
-	fp1 = fopen("inp2.txt", "r");			//open the original input file
-	fp2 = fopen("inp2_parsed.txt", "r");	//output the Process ID and event to another file. 
+	fp1 = fopen("inp3.txt", "r");			//open the original input file
+	fp2 = fopen("inp3_parsed.txt", "r");	//output the Process ID and event to another file. 
 	char str[300];
 	char str1[300];
 	const char delim[] = " ";

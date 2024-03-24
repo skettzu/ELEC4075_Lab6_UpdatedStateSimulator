@@ -1,47 +1,28 @@
-P1 Running P2 New P3 New P4 Blocked P5 Ready P6 Blocked P7 Blocked P8 Blocked P9 Ready P10 Blocked P11 New P12 Blocked P13 Ready P14 Blocked P15 New P16 Blocked P17 Ready P18 Blocked P19 New P20 Blocked end
-At time 3:  Time slice for P1 expires; P5 is dispatched.
-At time 6:  P2 is admitted; P3 is admitted; P11 is admitted.
-At time 9:  P5 requests the printer; P9 is dispatched.
-At time 12: An interrupt occurs for P4; P2 is dispatched.
-At time 15: P2 requests the disk; P4 is dispatched.
-At time 18: Time slice for P4 expires; P3 is dispatched.
-At time 21: P3 requests the keyboard; An interrupt occurs for P6.
-At time 24: P6 is dispatched; P15 is admitted.
-At time 27: P6 terminates; An interrupt occurs for P7.
-At time 30: P7 is dispatched; P19 is admitted.
-At time 33: P7 requests the printer; An interrupt occurs for P8.
-At time 36: P8 is dispatched; P13 is dispatched.
-At time 39: P8 terminates; An interrupt occurs for P2.
-At time 42: P2 is dispatched; P17 is dispatched.
-At time 45: Time slice for P2 expires; An interrupt occurs for P5.
-At time 48: P5 is dispatched; P11 is dispatched.
-At time 51: P5 terminates; An interrupt occurs for P3.
-At time 54: P3 is dispatched; P15 is dispatched.
-At time 57: P3 requests the disk; An interrupt occurs for P9.
-At time 60: P9 is dispatched; P19 is dispatched.
-At time 63: Time slice for P9 expires; An interrupt occurs for P1.
-At time 66: P1 is dispatched; P12 is dispatched.
-At time 69: P1 requests the keyboard; An interrupt occurs for P10.
-At time 72: P10 is dispatched; P14 is dispatched.
-At time 75: P10 terminates; An interrupt occurs for P7.
-At time 78: P7 is dispatched; P16 is dispatched.
-At time 81: P7 terminates; An interrupt occurs for P3.
-At time 84: P3 is dispatched; P18 is dispatched.
-At time 87: Time slice for P3 expires; An interrupt occurs for P1.
-At time 90: P1 is dispatched; P20 is dispatched.
-At time 93: P1 terminates; An interrupt occurs for P2.
-At time 96: P2 is dispatched; P13 requests the printer.
-At time 99: P2 terminates; P17 requests the disk.
-At time 102: P11 requests the keyboard; P15 requests the printer.
-At time 105: P19 requests the disk; P12 requests the keyboard.
-At time 108: P14 requests the printer; P16 requests the disk.
-At time 111: P18 requests the keyboard; P20 requests the printer.
-At time 114: P9 requests the disk; P4 requests the keyboard.
-At time 117: Swap out occurs as all processes are blocked.
-At time 120: P11 terminates; Swap in occurs.
-At time 123: P15 is dispatched; P19 is dispatched.
-At time 126: P15 terminates; P19 terminates.
-At time 129: P12 requests the printer; P14 requests the disk.
-At time 132: P16 requests the keyboard; P18 requests the printer.
-At time 135: P20 requests the disk; P9 requests the keyboard.
-At time 138: P4 requests the printer.
+P1 Ready P2 Blocked P3 Blocked P4 Ready P5 Running P6 Blocked P7 New P8 New P9 Blocked P10 Ready P11 Blocked P12 Blocked P13 Blocked P14 Blocked P15 Blocked P16 Blocked P17 Blocked P18 Blocked P19 Blocked P20 Blocked end
+At time 5:  Time slice for P5 expires; P10 is dispatched; P7 is admitted.
+At time 15: P10 requests the disk; P1 is dispatched;
+At time 18: An interrupt occurred for P6;
+At time 20: An interrupt occurred for P11; P5 requests the disk.
+At time 24: P1 requests the printer; P6 is dispatched.
+At time 28: Time slice for P6 expires; An interrupt occured for P2; An interrupt occurred for P5.
+At time 33: P2 is terminated; An interrupt occurred for P10.
+At time 36: P8 is admitted; P7 requests the keyboard; P10 is dispatched.
+At time 40: P8 is dispatched; P5 is dispatched.
+At time 45: P5 is terminated; P6 is dispatched. 
+At time 48: P4 is dispatched; P11 is dispatched.
+At time 51: P4 requests the printer; P6 requests the keyboard; P8 requests the disk; P11 requests the printer.
+At time 60: P10 requests the keyboard; An interrupt occurs for P11.
+At time 63: P11 is terminated.
+At time 65: An interrupt occurs for P10. 
+At time 68: An interrupt occurs for P8; An interrupt occurs for P4.
+At time 70: An interrupt occurs for P6.
+At time 71: P6 is terminated.
+At time 73: P10 requests the disk; P4 is dispatched.
+At time 76: P4 requests the disk.
+At time 79: An interrupt occurrs for P1.
+At time 81: An interrupt occurs for P7.
+At time 85: An interrupt occurs for P4.
+At time 87: P7 is terminated. 
+At time 90: P1 is terminated; P4 is dispatched.
+At time 92: P4 is terminated; P8 is dispatched.
+At time 95: P8 requests the keyboard; An interrupt occurs for P12.

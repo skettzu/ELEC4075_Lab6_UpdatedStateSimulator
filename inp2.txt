@@ -19,5 +19,5 @@ At time 70: An interrupt occurs for P6.
 At time 71: P6 is terminated.
 At time 73: P10 requests the disk; P4 is dispatched.
 At time 76: P4 requests the disk.
-At time 79: An interrupt occurrs for P1; An interrupt occurs for P7.
-At time 82: P1 is terminated
+At time 79: An interrupt occurrs for P1.
+At time 81: An interrupt occurs for P7.
