@@ -1,0 +1,18 @@
+P1 Ready P2 Blocked P3 Blocked P4 Ready P5 Running P6 Blocked P7 New P8 New P9 Blocked P10 Ready P11 Blocked P12 Blocked P13 Blocked P14 Blocked P15 Blocked P16 Blocked P17 Blocked P18 Blocked P19 Blocked P20 Blocked end
+P5 expires P10 dispatched P7 admitted 
+P10 requests disk P1 dispatched 
+P6 interrupt 
+P11 interrupt P5 requests disk 
+P1 requests printer P6 dispatched 
+P6 expires P2 interrupt P5 interrupt 
+P2 terminated P10 interrupt 
+P8 admitted P7 requests keyboard P10 dispatched 
+P8 dispatched P5 dispatched 
+P5 terminated P6 dispatched 
+P4 dispatched P11 dispatched 
+P4 requests printer P6 requests keyboard P8 requests disk P11 requests printer 
+P10 requests keyboard P11 interrupt 
+P11 terminated P10 interrupt 
+P8 interrupt P4 interrupt 
+P6 interrupt 
+

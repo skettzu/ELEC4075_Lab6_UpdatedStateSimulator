@@ -1,0 +1,9 @@
+P4 Ready P5 Ready P8 Running P9 Blocked P10 New P15 Ready P17 Blocked P18 Ready P19 Blocked/Suspended
+At time 3:  An interrupt occurred for P17; Time slice for P8 expires; P4 is dispatched 
+At time 8:  An interrupt occurred for P9; P1 is dispatched; P15 requests the printer; P19 is swapped in.
+At time 13: P11 is swapped out.
+At time 17: An interrupt occurred for P11; P15 is swapped in.
+At time 20: P1 requests the printer; P6 is dispatched.
+At time 25: Time slice for P6 expires; P2 is dispatched.
+At time 30: P2 is terminated; An interrupt occurred for P9.
+At time 33: P11 is swapped in; P5 is terminated; P6 is dispatched. 
