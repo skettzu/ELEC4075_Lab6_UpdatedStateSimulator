@@ -12,7 +12,12 @@ P5 terminated P6 dispatched
 P4 dispatched P11 dispatched 
 P4 requests printer P6 requests keyboard P8 requests disk P11 requests printer 
 P10 requests keyboard P11 interrupt 
-P11 terminated P10 interrupt 
+P11 terminated 
+P10 interrupt 
 P8 interrupt P4 interrupt 
 P6 interrupt 
+P6 terminated 
+P10 requests disk P4 dispatched 
+P4 requests disk 
+P1 interrupt P7 interrupt 
 

@@ -157,7 +157,7 @@ void queue_parser(char* queue) {
 int main()
 {
 
-	parser(); // run parser and stored parsed information in inp1_parsed.txt
+	parser(); // run parser and stored parsed information in inp2_parsed.txt
 	int swap_cap = 0;
 	float usr_threshold = 0.0;
 	

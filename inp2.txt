@@ -12,7 +12,12 @@ At time 45: P5 is terminated; P6 is dispatched.
 At time 48: P4 is dispatched; P11 is dispatched.
 At time 51: P4 requests the printer; P6 requests the keyboard; P8 requests the disk; P11 requests the printer.
 At time 60: P10 requests the keyboard; An interrupt occurs for P11.
-At time 63: P11 is terminated; An interrupt occurs for P10. 
+At time 63: P11 is terminated.
+At time 65: An interrupt occurs for P10. 
 At time 68: An interrupt occurs for P8; An interrupt occurs for P4.
 At time 70: An interrupt occurs for P6.
 At time 71: P6 is terminated.
+At time 73: P10 requests the disk; P4 is dispatched.
+At time 76: P4 requests the disk.
+At time 79: An interrupt occurrs for P1; An interrupt occurs for P7.
+At time 82: P1 is terminated
